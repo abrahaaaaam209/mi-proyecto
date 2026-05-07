@@ -62,6 +62,31 @@
       border-radius: 10px;
       background: linear-gradient(135deg, #ff7b00, #ffb347);
     }
+    
+    .penalty-game {
+      margin-top: 20px;
+      background: rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.13);
+    }
+    .goal-options { display: flex; flex-wrap: wrap; gap: 10px; }
+    .shot-btn {
+      border: none;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #0a1120;
+      background: linear-gradient(135deg, #ffd166, #ffeb99);
+    }
+    .result {
+      margin-top: 12px;
+      font-weight: 600;
+      background: rgba(255,255,255,.08);
+      padding: 10px;
+      border-radius: 10px;
+    }
     @media (max-width: 900px) {
       .facts { grid-template-columns: 1fr; }
       .meme-gallery { grid-template-columns: 1fr; }
@@ -87,6 +112,18 @@
       </div>
 
       <iframe src="https://www.youtube.com/embed/xYGK6lxqAqI" title="Gol de Cristiano Ronaldo" allowfullscreen></iframe>
+    
+      <section class="penalty-game" aria-label="Minijuego de penaltis">
+        <h2>⚽ Reto rápido: penalti decisivo</h2>
+        <p>Elige tu disparo y comprueba si el portero te lee la intención.</p>
+        <div class="goal-options">
+          <button class="shot-btn" data-shot="izquierda">Izquierda</button>
+          <button class="shot-btn" data-shot="centro">Centro</button>
+          <button class="shot-btn" data-shot="derecha">Derecha</button>
+        </div>
+        <div class="result" id="result">Marcador: Tú 0 - Portero 0</div>
+      </section>
+
     </section>
   </div>
 
@@ -94,5 +131,28 @@
     <a href="index.html">📘 Volver a biografía</a>
     <a href="logros.html">🏆 Ver logros</a>
   </nav>
+
+  <script>
+    const options = ["izquierda", "centro", "derecha"];
+    let goles = 0;
+    let paradas = 0;
+
+    document.querySelectorAll('.shot-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const tiro = button.dataset.shot;
+        const parada = options[Math.floor(Math.random() * options.length)];
+        const result = document.getElementById('result');
+
+        if (tiro === parada) {
+          paradas += 1;
+          result.textContent = `🧤 ¡Parada! El portero fue a ${parada}. Marcador: Tú ${goles} - Portero ${paradas}`;
+        } else {
+          goles += 1;
+          result.textContent = `🥅 ¡GOOOL! Tiraste a ${tiro} y el portero fue a ${parada}. Marcador: Tú ${goles} - Portero ${paradas}`;
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
