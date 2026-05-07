@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fan Zone de Cristiano Ronaldo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2 {
-            color: #1d3c6d;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        iframe {
-            max-width: 100%;
-            height: 315px;
-            border: none;
-        }
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        a {
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #1d3c6d;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            background-color: #0f2b4c;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristiano Ronaldo | Fan Zone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #130f40, #1d2671, #2b63f0);
+      color: #fff;
+    }
+    .container { max-width: 1080px; margin: 25px auto; padding: 0 14px; }
+    .fan-card {
+      background: rgba(12, 18, 38, 0.84);
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 12px 35px rgba(0,0,0,.35);
+    }
+    h1 { margin-top: 0; }
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .fact {
+      background: rgba(255,255,255,.1);
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .meme-gallery {
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 10px;
+    }
+    .meme-gallery img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    iframe {
+      margin-top: 18px;
+      width: 100%;
+      height: 340px;
+      border: none;
+      border-radius: 12px;
+    }
+    nav { text-align: center; margin: 24px 0 40px; }
+    a {
+      display: inline-block;
+      margin: 7px;
+      padding: 11px 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #ff7b00, #ffb347);
+    }
+    @media (max-width: 900px) {
+      .facts { grid-template-columns: 1fr; }
+      .meme-gallery { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <section>
-        <h1>Fan Zone de Cristiano Ronaldo</h1>
-        <p>¿Sabías que Cristiano Ronaldo es un auténtico fenómeno en redes sociales? Con más de 500 millones de seguidores, es una de las personas más seguidas del mundo. Además, en 2019 se convirtió en el primer deportista en alcanzar los 200 millones de seguidores en Instagram.</p>
-        <p>Un dato curioso es que Ronaldo también tiene una marca de ropa, CR7, que incluye desde ropa interior hasta fragancias.</p>
-        <a href="https://youtu.be/xYGK6lxqAqI">Gol cr7</a>
-    </section>
+  <div class="container">
+    <section class="fan-card">
+      <h1>🎉 Fan Zone CR7</h1>
+      <p>¡Bienvenido al rincón más divertido para fans de Cristiano Ronaldo! Aquí celebramos su grandeza con datos curiosos, imágenes épicas y energía futbolera.</p>
 
-    <nav>
-        <a href="index.html">Volver a la biografía</a>
-        <a href="logros.html">Ver logros</a>
-    </nav>
+      <div class="facts">
+        <div class="fact"><strong>⚽ Goles:</strong><br />Una máquina goleadora histórica.</div>
+        <div class="fact"><strong>📱 Redes:</strong><br />Uno de los más seguidos del planeta.</div>
+        <div class="fact"><strong>💪 Mentalidad:</strong><br />Disciplina total, siempre al máximo.</div>
+      </div>
+
+      <div class="meme-gallery">
+        <img src="imagenes/celebrando.jpg" alt="Celebración de Cristiano" />
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=700&q=80" alt="Fútbol en césped" />
+        <img src="imagenes/OIP-3957414938.jpg" alt="Cristiano en acción" />
+      </div>
+
+      <iframe src="https://www.youtube.com/embed/xYGK6lxqAqI" title="Gol de Cristiano Ronaldo" allowfullscreen></iframe>
+    </section>
+  </div>
+
+  <nav>
+    <a href="index.html">📘 Volver a biografía</a>
+    <a href="logros.html">🏆 Ver logros</a>
+  </nav>
 </body>
 </html>

@@ -1,60 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografía de Cristiano Ronaldo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2 {
-            color: #1d3c6d;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        a {
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #1d3c6d;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            background-color: #0f2b4c;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristiano Ronaldo | Inicio</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111a2b;
+      --text: #eaf1ff;
+      --muted: #b9c6e4;
+      --gold: #f8c34a;
+      --blue: #2b63f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top right, #203b76, var(--bg) 45%);
+      min-height: 100vh;
+    }
+    .hero {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 24px;
+      background: rgba(17, 26, 43, 0.9);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    }
+    .hero h1 { margin-top: 0; font-size: clamp(1.8rem, 4vw, 2.8rem); }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--gold), #ffde8d);
+      color: #1d1d1d;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    p { color: var(--muted); line-height: 1.65; }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+    .gallery {
+      max-width: 1100px;
+      margin: 0 auto 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 0 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    nav {
+      text-align: center;
+      margin: 28px 0 40px;
+    }
+    a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--blue), #3c8dff);
+    }
+    a:hover { transform: translateY(-2px); }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <section>
-        <h1>Biografía de Cristiano Ronaldo</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo">
-        <p>Cristiano Ronaldo, nacido el 5 de febrero de 1985 en Funchal, Madeira, Portugal, es considerado uno de los mejores futbolistas de la historia. Desde su debut profesional, ha alcanzado innumerables logros en su carrera, destacándose por su capacidad física, habilidades técnicas y mentalidad competitiva. A lo largo de su carrera, ha jugado para equipos de élite como el Sporting de Lisboa, el Manchester United, el Real Madrid, la Juventus, y más recientemente, el Al Nassr en Arabia Saudita.</p>
-        <p>Ronaldo ha ganado múltiples Balones de Oro, ha sido máximo goleador en varias competiciones y ha conquistado la Liga de Campeones de la UEFA en diversas ocasiones. Su influencia trasciende el fútbol, siendo también un empresario exitoso y una figura destacada en redes sociales.</p>
-    </section>
+  <section class="hero">
+    <div>
+      <span class="badge">⭐ Leyenda del fútbol mundial</span>
+      <h1>Biografía de Cristiano Ronaldo</h1>
+      <p>Cristiano Ronaldo dos Santos Aveiro nació el 5 de febrero de 1985 en Funchal, Madeira (Portugal). Desde joven mostró una disciplina excepcional, convirtiéndose en uno de los jugadores más completos de la historia.</p>
+      <p>Su carrera ha pasado por Sporting CP, Manchester United, Real Madrid, Juventus y Al Nassr, dejando una huella de goles, títulos y liderazgo. Su mentalidad ganadora lo transformó en un ícono global dentro y fuera del campo.</p>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo sonriendo" />
+  </section>
 
-    <nav>
-        <a href="logros.html">Ver logros</a>
-        <a href="fan-zone.html">Ir a Fan Zone</a>
-    </nav>
+  <section class="gallery" aria-label="Galería destacada de Cristiano Ronaldo">
+    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80" alt="Estadio de fútbol iluminado" />
+    <img src="imagenes/celebrando.jpg" alt="Cristiano Ronaldo celebrando" />
+    <img src="imagenes/OIP-3957414938.jpg" alt="Cristiano Ronaldo en partido" />
+  </section>
+
+  <nav>
+    <a href="logros.html">🏆 Ver logros</a>
+    <a href="fan-zone.html">🎉 Ir a Fan Zone</a>
+  </nav>
 </body>
 </html>
